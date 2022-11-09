@@ -9,7 +9,7 @@ var valor2 = document.getElementById("campo2").value;
     }
 }
 
-function corrige() {
+function branco() {
     document.getElementById("campo1").value = "";
     document.getElementById("campo2").value = "";
 }
@@ -20,11 +20,11 @@ function corrige() {
  }
 
  function votar() {
-    var valor1 = perseInt(document.getElementById("campo1").value);
-    var valor2 = perseInt(document.getElementById("campo2").value);
+    var valor1 = parseInt(document.getElementById("campo1").value);
+    var valor2 = parseInt(document.getElementById("campo2").value);
     var candidato = (valor1 * 10) + valor2;
-    if (sessionStorage.getItem(candidato) !==null) {
-        votos = perseInt(sessionStorage.getItem(candidato)) + 1;
+    if (sessionStorage.getItem(candidato) !== null) {
+        votos = parseInt(sessionStorage.getItem(candidato)) + 1;
         sessionStorage.setItem(candidato, votos);
     } else {
         sessionStorage.setItem(candidato, 1);
