@@ -9,15 +9,11 @@ var valor2 = document.getElementById("campo2").value;
     }
 }
 
-function branco() {
+function corrije() {
     document.getElementById("campo1").value = "";
     document.getElementById("campo2").value = "";
 }
 
- function corrige() {
-    document.getElementById("campo1").value = "";
-    document.getElementById("campo2").value = "";
- }
 
  function votar() {
     var valor1 = parseInt(document.getElementById("campo1").value);
